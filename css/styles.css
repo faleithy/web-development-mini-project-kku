@@ -1,0 +1,373 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*Variables*/
+:root {
+--header-height: 3rem;
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========== Margenes ==========*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+}
+/*=============== BASE ===============*/
+*, ::before, ::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body {
+margin: var(--header-height) 0 0 0;
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+background-color: var(--body-color);
+color: rgb(30, 30, 30);;
+}
+
+h1, h2, h3 {
+font-weight: var(--font-semi-bold);
+color: var(--title-color);
+line-height: 1.5;
+}
+
+ul {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+/*=============== REUSABLR CSS CLASSES ===============*/
+.section {
+    padding: 4.5rem 0 1rem;
+}
+
+.section__title, .section__title-center {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: var(--mb-1);
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+}
+/*=============== NAV ===============*/
+.nav {
+    height: 7.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    width: 600px;
+}
+
+.nav__link, .nav__logo {
+color: rgb(30, 30, 30);
+font-weight: var(--font-semi-bold);
+}
+.nav__logo{
+padding-top: 0rem;
+}
+
+/*======== clock ========*/
+
+.time { 
+    margin: 6.25rem auto;
+    color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+    display: inline-block;
+    background-color: teal;
+    color: #FFF;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: var(--font-semi-bold);
+}
+  
+.button:hover {
+    background-color: rgb(0, 54, 54);
+}
+  
+  
+.button-link {
+    background: none;
+    padding: 0;
+    color: teal;
+}
+  
+.button-link:hover {
+    background-color: transparent;
+}
+
+/*============= HOME =============*/
+.home__container {
+    row-gap: 3rem;
+    margin-top: 5rem;
+}
+  
+.home__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+  
+.home__description {
+    margin-bottom: 2rem;
+    padding-right: 5rem;
+    font-size: 1.25rem;
+}
+
+.home__img {
+    width: 480px;
+    float: right;
+}
+/*=============== Vision ===============*/
+.vision__container-1 {
+    row-gap: 3rem;
+    margin-top: 5rem;
+}
+.vision__container-2 {
+    row-gap: 3rem;
+    margin-top: 14rem;
+}
+  
+.vision__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: .75rem;
+}
+
+.vision__description-1 {
+    margin-bottom: 2rem;
+    padding-right: 5rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.vision__description-2 {
+    margin-bottom: 2rem;
+    padding-right: 5rem;
+    font-size: 1.25rem;
+    text-align: center;
+
+}
+
+.vision__img {
+    width: 480px;
+    float: right;
+}
+
+.vision__img-2 {
+    width: 480px;
+    float: left;
+}
+
+/*=============== GALLERY ===============*/
+.gallery__container {
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    background-color: rgb(149, 208, 229);
+}
+  
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 1rem;
+    vertical-align: middle;
+    width: 100%;
+    background-color: lightblue;
+}
+
+/*=============== CONTACT ===============*/
+.contact__container{
+    display: flex;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+}
+
+.contact__content{
+    margin-bottom: 2rem;
+    margin-right: 18rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.formbtn{
+    border: none;
+    cursor: pointer;
+}
+
+label,
+textarea,
+input{
+    margin-top: 0rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+fieldset, legend {
+    background-color: rgb(255, 255, 255);
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+    }
+legend {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.2em;
+    text-shadow: #fff 1px 1px 1px; 
+
+}
+fieldset {
+    background-color: rgb(213, 252, 235);
+    width: 360px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-right-radius: 5px; 
+}
+#error_message{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+
+/*-========== FOOTER ==========*/
+.footer {
+    background-color: rgb(109,189,153)
+  }
+  
+  .footer__container {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .footer__logo, .footer__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+  }
+  
+  .footer__logo {
+    display: inline-block;
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+  }
+  
+  .footer__descriptin, .footer__link {
+    font-size: var(--small-font-size);
+  }
+  
+  .footer__links {
+    display: -ms-grid;
+    display: grid;
+    row-gap: .5rem;
+  }
+  
+  .footer__link {
+    color: var(--title-color);
+  }
+  
+  .footer__social {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .footer__social-link {
+    font-size: 1.45rem;
+    color: teal;
+  }
+  .footer__social-link:hover {
+    color: rgb(0, 84, 84);
+}
+  
+  .footer__copy {
+    margin-top: 6rem;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+  }
+
+
+/*=========== clock ============*/
+.time { 
+    margin:100px auto;
+    background: teal;
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 8px;
+    text-align: center;
+    width: 12rem;
+}
+
